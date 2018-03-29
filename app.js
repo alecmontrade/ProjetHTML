@@ -20,7 +20,7 @@ window.onload = function(e){
 	console.log(doc_ici);
 	//console.log(doc.mesRecettes[0].titre);
 	
-	https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+	//https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
 	
 }
 
