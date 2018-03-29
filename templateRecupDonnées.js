@@ -1,5 +1,6 @@
 var doc_ici=[];
 var req = new XMLHttpRequest();
+var stop=0;
 function monCode() 
 		{ 
 		   if (req.readyState == 4) 
@@ -7,7 +8,10 @@ function monCode()
 				var doc = eval('(' + req.responseText + ')'); 
 				doc_ici=doc;
 		   }
-		   disp();
+			stop=stop+1;
+			if(stop==3){
+				   disp();
+			}
 		} 
 		
 		
