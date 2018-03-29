@@ -1,0 +1,43 @@
+mesRecettes = [{
+        id: "1",
+        titre: "ce truc marche",
+        "price": 13, 
+        "desc":"Une belle decouverte en tout cas",
+        "src":"riviere.jpg",
+        "qte":3,
+        "isDispo": true,
+        "commentaire": [
+            {
+                "user": "Shlag",
+                "date": new Date("2018-07-21"),
+                "texte":"Un très joli commentaire",
+            },
+            {
+                "user": "Shlag2",
+                "date": new Date("2018-05-13"),
+                "texte":"Ca c'est cool !",
+            }
+        ]
+    },
+	{
+        id: "1",
+        titre: "ce truc marche",
+        "price": 13, 
+        "desc":"Une belle decouverte en tout cas",
+        "src":"riviere.jpg",
+        "qte":3,
+        "isDispo": true,
+        "commentaire": [
+            {
+                "user": "Shlag",
+                "date": new Date("2018-07-21"),
+                "texte":"Un très joli commentaire",
+            },
+            {
+                "user": "Shlag2",
+                "date": new Date("2018-05-13"),
+                "texte":"Ca c'est cool !",
+            }
+        ]
+    }
+]
