@@ -36,43 +36,52 @@ function disp(){
             tps=c.tps;
             difficulte=c.difficulte;
             ingredients=c.ingredients;
+            etapes=c.etapes;
         }
     });
+    
+    var recetteglobale=document.createElement("div");
+    
+    recetteglobale.setAttribute("style", "margin: 0 auto; width: 80%;");
+    recetteglobale.setAttribute("class", "text-center recetteglobale");
     
     var titrerecette=document.createElement("h2");
     titrerecette.setAttribute("class","titrerecette display-2");
     titrerecette.textContent=titre;
-    document.body.appendChild(titrerecette);
+    recetteglobale.appendChild(titrerecette);
     
     var descrecette=document.createElement("h5");
     descrecette.setAttribute("class","descrecette");
     descrecette.textContent=enTete;
-    document.body.appendChild(descrecette);
+    recetteglobale.appendChild(descrecette);
     
     var badgeprix=document.createElement("span");
     badgeprix.setAttribute("class","badge badge-danger");
     badgeprix.textContent=prix;
-    document.body.appendChild(badgeprix);
+    recetteglobale.appendChild(badgeprix);
     
     var badgetemps=document.createElement("span");
     badgetemps.setAttribute("class","badge badge-primary");
     badgetemps.textContent=tps+" min";
-    document.body.appendChild(badgetemps);
+    recetteglobale.appendChild(badgetemps);
     
     var badgedifficulte=document.createElement("span");
     badgedifficulte.setAttribute("class","badge badge-secondary");
     badgedifficulte.textContent=difficulte;
-    document.body.appendChild(badgedifficulte);
+    recetteglobale.appendChild(badgedifficulte);
+    
+    var retourligne=document.createElement("br");
+    recetteglobale.appendChild(retourligne);
     
     var imgrecette=document.createElement("img");
     imgrecette.setAttribute("class","imgcrecette img-fluid img-thumbnail");
     imgrecette.setAttribute("src", img);
     imgrecette.setAttribute("alt", "Image de la recette");
-    document.body.appendChild(imgrecette);
+    recetteglobale.appendChild(imgrecette);
     
     var texteingredientdebut=document.createElement("h2");
     texteingredientdebut.textContent="Liste des ingrédient(s)";
-    document.body.appendChild(texteingredientdebut);
+    recetteglobale.appendChild(texteingredientdebut);
     
     
     ingredients.forEach(function(a){
@@ -99,12 +108,27 @@ function disp(){
             ingredient.appendChild(ingredientTexte);
                     
         
-            document.body.appendChild(ingredient);
+            recetteglobale.appendChild(ingredient);
+    });
+    
+    etapes.forEach(function(a){
+            
+            var titredesc=document.createElement("h2");
+            titredesc.setAttribute("class","display-4");
+            titredesc.textContent=a.titre;
+            recetteglobale.appendChild(titredesc);
+
+            var descrecette=document.createElement("h5");
+            descrecette.setAttribute("class","descrecette");
+            descrecette.textContent=a.desc;
+            recetteglobale.appendChild(descrecette);
+
     });
     
         
     
-    
+            document.body.appendChild(recetteglobale);
+
 }
 
 window.onload = function(e){ 
