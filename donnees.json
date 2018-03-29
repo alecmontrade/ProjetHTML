@@ -1,43 +1,205 @@
 mesRecettes = [{
-        id: "1",
-        titre: "ce truc marche",
-        "price": 13, 
-        "desc":"Une belle decouverte en tout cas",
-        "src":"riviere.jpg",
-        "qte":3,
-        "isDispo": true,
-        "commentaire": [
+        
+		
+		id: "1",
+        titre: "Ribs à la Mexicaine",
+        img: "/img/ribs.jpg",
+        enTete:"Sublimé avec les épices mexicaines, la pièce de Porc sera un véritable délice pour les papilles! Vous ne serez pas déçus!",
+        tps:20,
+        prix: "€€",
+		difficulte: 2,
+		"ingredients": [
             {
-                "user": "Shlag",
-                "date": new Date("2018-07-21"),
-                "texte":"Un très joli commentaire",
+				"ingredient": [
+				{
+					id: 1,
+					titre: "Ribs de Porc",
+					img: "/img/ingredient/ribsfrais.jpg",
+				}
+				"ingredient": [
+				{
+					id: 2,
+					titre: "Poivrons",
+					img: "/img/poivrons.jpg",
+				}
+				"ingredient": [
+				{
+					id: 3,
+					titre: "Piment",
+					img: "/img/ingredient/piment.jpg",
+				}
             },
-            {
-                "user": "Shlag2",
-                "date": new Date("2018-05-13"),
-                "texte":"Ca c'est cool !",
-            }
         ]
+		"etapes": [
+            {
+				"etape": [
+				{
+					id: 1,
+					titre: "Préparez la préparation",
+					desc: "Mélangez poivrons et piment dans un bol. Versez ensuite la préparation directement sur la viande.",
+				}
+				"etape": [
+				{
+					id: 2,
+					titre: "Allumez le feu",
+					desc: "Versez le charbon de bois, allumez le feu!",
+				}
+				"etape": [
+				{
+					id: 3,
+					titre: "Saisissez la pièce de viande",
+					desc: "Déposez avec délicatesse la pièce de viande, laissez les saisir pendant quelques minutes, attention, rien ne doit crâmer!",
+				}
+				"etape": [
+				{
+					id: 4,
+					titre: "Retournez la pièce de viande",
+					desc: "Avec un grande délicatesse, retournez le ribs",
+				}
+				"etape": [
+				{
+					id: 5,
+					titre: "Emballez les pièces de viande",
+					desc: "Préparez un papier aluminium de taille suffisante et emballez votre pièce. L'emballage doit être parfaitement hermétique. Replacez ensuite les emballages sur le barbacue, à feu doux.",
+				}
+				"etape": [
+				{
+					id: 6,
+					titre: "Bonne dégustation!",
+					desc: "Une fois que les pièces de viande sont bien cuites, ôtez les du BBQ et savourez votre repas! Attention cependant à ne pas vous brûler les doigts!",
+				}
+            },
+        ]
+        
     },
-	{
-        id: "1",
-        titre: "ce truc marche",
-        "price": 13, 
-        "desc":"Une belle decouverte en tout cas",
-        "src":"riviere.jpg",
-        "qte":3,
-        "isDispo": true,
-        "commentaire": [
+	
+	
+	
+	
+	
+	
+	
+	
+		id: "2",
+        titre: "Saucisse Merguez",
+        img: "/img/saucissemerguez.jpg",
+        enTete:"La classique saucisse merguez! À déguster en famille ou entre amis, un délice gustatif!",
+        tps:10,
+        prix: "€",
+		difficulte: 1,
+		"ingredients": [
             {
-                "user": "Shlag",
-                "date": new Date("2018-07-21"),
-                "texte":"Un très joli commentaire",
+				"ingredient": [
+				{
+					id: 1,
+					titre: "Saucisse",
+					img: "/img/ingredient/saucisse.jpg",
+				}
+				"ingredient": [
+				{
+					id: 2,
+					titre: "Merguez",
+					img: "/img/ingredient/merguez.jpg",
+				}
             },
-            {
-                "user": "Shlag2",
-                "date": new Date("2018-05-13"),
-                "texte":"Ca c'est cool !",
-            }
         ]
-    }
+		"etapes": [
+            {
+				"etape": [
+				{
+					id: 1,
+					titre: "Allumez le feu",
+					desc: "Versez le charbon de bois, allumez le feu!",
+				}
+				"etape": [
+				{
+					id: 2,
+					titre: "Saisissez les saucisses et merguez",
+					desc: "Déposez avec délicatesse les pièces de viande, laissez les saisir pendant quelques minutes, attention, rien ne doit crâmer!",
+				}
+				"etape": [
+				{
+					id: 3,
+					titre: "Retournez les saucisses et merguez",
+					desc: "Toujours avec la plus grande des délicatesses, retournez les saucisses et merguez.",
+				}
+				"etape": [
+				{
+					id: 4,
+					titre: "Emballez les pièces de viande",
+					desc: "Préparez un papier aluminium de taille suffisante et emballez vos pièces. Separez saucisses des merguez, en effet le jus des merguez risque d'altérer le goût de la saucisse. L'emballage doit être parfaitement hermétique. Replacez ensuite les emballages sur le barbecue, à feu doux.",
+				}
+				"etape": [
+				{
+					id: 5,
+					titre: "Bonne dégustation!",
+					desc: "Une fois que les pièces de viande sont bien cuites, ôtez les du BBQ et savourez votre repas! Attention cependant à ne pas vous brûler les doigts!",
+				}
+            },
+        ]
+        
+    },
+            
+            
+        id: "3",
+        titre: "Poulet au curry",
+        img: "/img/wings.jpg",
+        enTete:"Un bon poulet grillé et braisé au barbecue, un goût inimitable!",
+        tps:25,
+        prix: "€€",
+		difficulte: 2,
+		"ingredients": [
+            {
+				"ingredient": [
+				{
+					id: 1,
+					titre: "Cuisse de Poulet",
+					img: "/img/ingredient/cuisse.jpg",
+				}
+				"ingredient": [
+				{
+					id: 2,
+					titre: "Curry",
+					img: "/img/ingredient/curry.jpg",
+				}
+            },
+        ]
+		"etapes": [
+            {
+				"etape": [
+				{
+					id: 1,
+					titre: "Allumez le feu",
+					desc: "Versez le charbon de bois, allumez le feu!",
+				}
+				"etape": [
+				{
+					id: 2,
+					titre: "Saisissez le poulet",
+					desc: "Déposez avec délicatesse les pièces de viande, laissez les saisir pendant quelques minutes, attention, rien ne doit crâmer!",
+				}
+				"etape": [
+				{
+					id: 3,
+					titre: "Retournez le poulet",
+					desc: "Toujours avec la plus grande des délicatesses, retournez les pièces de viande.",
+				}
+				"etape": [
+				{
+					id: 4,
+					titre: "Emballez les pièces de viande",
+					desc: "Préparez un papier aluminium de taille suffisante et emballez vos pièces. L'emballage doit être parfaitement hermétique. Replacez ensuite les emballages sur le barbecue, à feu doux.",
+				}
+				"etape": [
+				{
+					id: 5,
+					titre: "Bonne dégustation!",
+					desc: "Une fois que les pièces de viande sont bien cuites, ôtez les du BBQ et savourez votre repas! Attention cependant à ne pas vous brûler les doigts!",
+				}
+            },
+        ]
+        
+    },
+	
+	
 ]
