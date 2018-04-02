@@ -90,6 +90,6 @@ function disp(){
 
 window.onload = function(e){ 
 	req.open("GET", "donnees.json", true); 
-	req.onreadystatechange = monCode;   // la fonction de prise en charge
+	req.onreadystatechange = monCode();   // la fonction de prise en charge
 	req.send(null);
 }
