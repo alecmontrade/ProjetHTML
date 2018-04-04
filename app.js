@@ -62,21 +62,24 @@ function disp(){
     
     var header = document.createElement("header");
     
-    var titrepage = document.createElement("h1")
-    titrepage.setAttribute("class", "text-center display-1");
-    titrepage.textContent="BBQ Website";
-    header.appendChild(titrepage);
-    
+	var divLogo=document.createElement("div");
+	divLogo.setAttribute("class", "divImg");
+	header.appendChild(divLogo);
+	
     var imagelogo = document.createElement("img")
-    imagelogo.setAttribute("class", "text-center");
+    imagelogo.setAttribute("class", "text-center img");
     imagelogo.setAttribute("src", "img/logobbq.png");
-    header.appendChild(imagelogo);
+    divLogo.appendChild(imagelogo);
     
+	
+	var divTitle=document.createElement("div");
+    divTitle.setAttribute("class","title");
+	header.appendChild(divTitle);
     
     var descpage = document.createElement("h1")
     descpage.setAttribute("class", "text-center display-4");
     descpage.textContent="LES MEILLEURES RECETTES DE BBQ AU MONDE!!";
-    header.appendChild(descpage);
+    divTitle.appendChild(descpage);
        
     var traitpage = document.createElement("HR");
     header.appendChild(traitpage);
@@ -93,14 +96,8 @@ function disp(){
         recettes.setAttribute("style", "margin: 0 auto; width: 50%;");
 	console.log(doc_ici);
         doc_ici.forEach(function(e){
-            
-            
-            
-            
+           
 			if(e.disp==true){
-                
-                
-                
                 
 				var recette = document.createElement("div");
 				var recetteTexte = document.createElement("div");

@@ -17,6 +17,36 @@ function monCode()
 		
 		
 function disp(){
+	
+	
+	
+	var header = document.createElement("header");
+    
+	var divLogo=document.createElement("div");
+	divLogo.setAttribute("class", "divImg");
+	header.appendChild(divLogo);
+	
+    var imagelogo = document.createElement("img")
+    imagelogo.setAttribute("class", "text-center img");
+    imagelogo.setAttribute("src", "img/logobbq.png");
+    divLogo.appendChild(imagelogo);
+    
+	
+	var divTitle=document.createElement("div");
+    divTitle.setAttribute("class","title");
+	header.appendChild(divTitle);
+    
+    var descpage = document.createElement("h1")
+    descpage.setAttribute("class", "text-center display-4");
+    descpage.textContent="LES MEILLEURES RECETTES DE BBQ AU MONDE!!";
+    divTitle.appendChild(descpage);
+       
+    var traitpage = document.createElement("HR");
+    header.appendChild(traitpage);
+    
+    document.body.appendChild(header);
+	
+	
     
     //Récupération de l'ID de la recette sélectionnée
     function getParameterURL(){
@@ -154,6 +184,20 @@ function disp(){
             recetteglobale.appendChild(affvideo);
     
             document.body.appendChild(recetteglobale);
+			
+			var footer = document.createElement("footer");
+    
+    var traitfinpage = document.createElement("HR");
+    footer.appendChild(traitfinpage);
+    
+    var descfinpage = document.createElement("p")
+    descfinpage.setAttribute("class", "text-center");
+    descfinpage.textContent=" Site web réalisé par Dyvia Fleury, Alec Montrade et Enzo Contini dans le cadre du cours de HTML5. ";
+    footer.appendChild(descfinpage);
+       
+    
+    
+    document.body.appendChild(footer);
 
 }
 

@@ -2,6 +2,8 @@ var doc_ici=[];
 var req = new XMLHttpRequest();
 var stop=0;
 var marecette;
+
+
 function monCode() 
 		{ 
 		   if (req.readyState == 4) 
