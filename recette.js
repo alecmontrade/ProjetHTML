@@ -43,11 +43,11 @@ function disp(){
     
     var recetteglobale=document.createElement("div");
     
-    recetteglobale.setAttribute("style", "margin: 0 auto; width: 80%;");
+    recetteglobale.setAttribute("style", "margin: 0 auto; width: 50%;");
     recetteglobale.setAttribute("class", "text-center recetteglobale");
     
     var titrerecette=document.createElement("h2");
-    titrerecette.setAttribute("class","titrerecette display-2");
+    titrerecette.setAttribute("class","titrerecette display-4");
     titrerecette.textContent=titre;
     recetteglobale.appendChild(titrerecette);
     
@@ -80,20 +80,22 @@ function disp(){
     imgrecette.setAttribute("alt", "Image de la recette");
     recetteglobale.appendChild(imgrecette);
     
+     var affIngredients=document.createElement("div");
+    affIngredients.setAttribute("class","ingredients");
+    
     var texteingredientdebut=document.createElement("h2");
     texteingredientdebut.textContent="Liste des ingrédient(s)";
-    recetteglobale.appendChild(texteingredientdebut);
+    affIngredients.appendChild(texteingredientdebut);
     
-    var affIngredients=document.createElement("div");
-    affIngredients.setAttribute("class","ingredients");
+   
     
     
     ingredients.forEach(function(a){
             var ingredient = document.createElement("div");
             var ingredientTexte = document.createElement("div");
             
-            ingredient.setAttribute("class", "card");
-            ingredient.setAttribute("style", "width: 18rem");
+            ingredient.setAttribute("class", "card  w-100");
+            //ingredient.setAttribute("style", "width: 12rem");
             ingredientTexte.setAttribute("class", "card-body");
             
             var ingredientimg = document.createElement("img");
@@ -123,17 +125,19 @@ function disp(){
     etapes.forEach(function(a){
             
             
-            var titredesc=document.createElement("h2");
-            titredesc.setAttribute("class","display-4");
+            var titredesc=document.createElement("h4");
+            titredesc.setAttribute("class","display-5");
             titredesc.textContent=a.titre;
             affEtapes.appendChild(titredesc);
 
-            var descrecette=document.createElement("h5");
+            var descrecette=document.createElement("h6");
             descrecette.setAttribute("class","descrecette");
             descrecette.textContent=a.desc;
             affEtapes.appendChild(descrecette);
 
     });
+    
+    
             recetteglobale.appendChild(affEtapes);
             
             var titreVideo=document.createElement("h2")
