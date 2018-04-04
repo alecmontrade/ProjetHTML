@@ -123,6 +123,11 @@ mesRecettes = [{
         ]
         
     },
+               
+               
+               
+               
+               
 	{
 		id: "3",
 		"disp":true,
@@ -171,6 +176,62 @@ mesRecettes = [{
 					titre: "Bonne dégustation!",
 					desc: "Une fois que les pièces de viande sont bien cuites, ôtez les du BBQ et savourez votre repas! Attention cependant à ne pas vous brûler les doigts!",
 				}
+        ]
+        
+    },
+               
+               
+               
+               
+               
+{
+		id: "4",
+		"disp":true,
+        titre: "Saucisse Curry",
+        img: "img/saucissecurry.jpg",
+        enTete:"Une saucisse au curry ! Intemporel et savoureux, vous ne décevrez pas ! ",
+        tps:30,
+        prix: "€€",
+		difficulte: 2,
+		"ingredients": [
+				{
+					id: 1,
+					titre: "Saucisse",
+					img: "img/ingredient/saucisse.jpg",
+				},
+				{
+					id: 2,
+					titre: "Curry",
+					img: "img/ingredient/curry.jpg",
+				}
+        ],
+		"etapes": [
+				{
+					id: 1,
+					titre: "Allumez le feu",
+					desc: "Versez le charbon de bois, allumez le feu!",
+				},
+				{
+					id: 2,
+					titre: "Saisissez les saucisses",
+					desc: "Déposez avec délicatesse les pièces de viande, laissez les saisir pendant quelques minutes, attention, rien ne doit crâmer!",
+				},
+				{
+					id: 3,
+					titre: "Retournez les saucisses",
+					desc: "Toujours avec la plus grande des délicatesses, retournez les saucisses et merguez.",
+				},
+				{
+					id: 4,
+					titre: "Emballez les pièces de viande",
+					desc: "Préparez un papier aluminium de taille suffisante et emballez vos pièces. Separez saucisses des merguez, en effet le jus des merguez risque d'altérer le goût de la saucisse. L'emballage doit être parfaitement hermétique. Replacez ensuite les emballages sur le barbecue, à feu doux.",
+				},
+				{
+					id: 5,
+					titre: "Bonne dégustation!",
+					desc: "Une fois que les pièces de viande sont bien cuites, ôtez les du BBQ et savourez votre repas! Attention cependant à ne pas vous brûler les doigts!",
+				}
+        
         ]
         
     }
