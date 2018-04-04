@@ -2,7 +2,7 @@ mesRecettes = [{
 		"id": "1",
 		"disp":true,
         "titre": "Ribs à la Mexicaine",
-        "img": "/img/ribs.jpg",
+        "img": "img/ribs.jpg",
         "enTete":"Sublimé avec les épices mexicaines, la pièce de Porc sera un véritable délice pour les papilles! Vous ne serez pas déçus!",
         "tps":20,
         "prix": "€€",
@@ -11,17 +11,17 @@ mesRecettes = [{
 				{
 					id: 1,
 					titre: "Ribs de Porc",
-					img: "/img/ingredient/ribsfrais.jpg",
+					img: "img/ingredient/ribsfrais.jpg",
 				},
 				{
 					id: 2,
 					titre: "Poivrons",
-					img: "/img/poivrons.jpg",
+					img: "img/poivrons.jpg",
 				},
 				{
 					id: 3,
 					titre: "Piment",
-					img: "/img/ingredient/piment.jpg",
+					img: "img/ingredient/piment.jpg",
 				}
         ],
 		"etapes": [
@@ -69,7 +69,7 @@ mesRecettes = [{
 		id: "2",
 		"disp":true,
         titre: "Saucisse Merguez",
-        img: "/img/saucissemerguez.jpg",
+        img: "img/saucissemerguez.jpg",
         enTete:"La classique saucisse merguez! À déguster en famille ou entre amis, un délice gustatif!",
         tps:10,
         prix: "€",
@@ -78,17 +78,17 @@ mesRecettes = [{
 				{
 					id: 1,
 					titre: "Saucisse",
-					img: "/img/ingredient/saucisse.jpg",
+					img: "img/ingredient/saucisse.jpg",
 				},
 				{
 					id: 2,
 					titre: "Merguez",
-					img: "/img/ingredient/merguez.jpg",
+					img: "img/ingredient/merguez.jpg",
 				},
 				{
 					id: 3,
 					titre: "Piment",
-					img: "/img/ingredient/piment.jpg",
+					img: "img/ingredient/piment.jpg",
 				}
         ],
 		"etapes": [
@@ -125,7 +125,7 @@ mesRecettes = [{
 		id: "3",
 		"disp":true,
         titre: "Poulet au curry",
-        img: "/img/wings.jpg",
+        img: "img/wings.jpg",
         enTete:"Un bon poulet grillé et braisé au barbecue, un goût inimitable!",
         tps:25,
         prix: "€€",
@@ -134,12 +134,12 @@ mesRecettes = [{
 				{
 					id: 1,
 					titre: "Cuisse de Poulet",
-					img: "/img/ingredient/cuisse.jpg",
+					img: "img/ingredient/cuisse.jpg",
 				},
 				{
 					id: 2,
 					titre: "Curry",
-					img: "/img/ingredient/curry.jpg",
+					img: "img/ingredient/curry.jpg",
 				}
         ],
 		"etapes": [
