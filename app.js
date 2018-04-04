@@ -54,14 +54,54 @@ function changeTri(mainIngredients,doc){
 
 		
 function disp(){
+    
+    
+    
+    
 	$("body").empty();
+    
+    var header = document.createElement("header");
+    
+    var titrepage = document.createElement("h1")
+    titrepage.setAttribute("class", "text-center display-1");
+    titrepage.textContent="BBQ Website";
+    header.appendChild(titrepage);
+    
+    var imagelogo = document.createElement("img")
+    imagelogo.setAttribute("class", "text-center");
+    imagelogo.setAttribute("src", "img/logobbq.png");
+    header.appendChild(imagelogo);
+    
+    
+    var descpage = document.createElement("h1")
+    descpage.setAttribute("class", "text-center display-4");
+    descpage.textContent="LES MEILLEURES RECETTES DE BBQ AU MONDE!!";
+    header.appendChild(descpage);
+       
+    var traitpage = document.createElement("HR");
+    header.appendChild(traitpage);
+    
+    document.body.appendChild(header);
+    
+   
+    
+
+
+    
 	var recettes = document.createElement("div");
         recettes.setAttribute("class", "recettes ");
         recettes.setAttribute("style", "margin: 0 auto; width: 50%;");
 	console.log(doc_ici);
         doc_ici.forEach(function(e){
             
+            
+            
+            
 			if(e.disp==true){
+                
+                
+                
+                
 				var recette = document.createElement("div");
 				var recetteTexte = document.createElement("div");
 				
@@ -120,6 +160,20 @@ function disp(){
         
         document.body.appendChild(recettes);
 	
+     var footer = document.createElement("footer");
+    
+    var traitfinpage = document.createElement("HR");
+    footer.appendChild(traitfinpage);
+    
+    var descfinpage = document.createElement("p")
+    descfinpage.setAttribute("class", "text-center");
+    descfinpage.textContent=" Site web réalisé par Dyvia Fleury, Alec Montrade et Enzo Contini dans le cadre du cours de HTML5. ";
+    footer.appendChild(descfinpage);
+       
+    
+    
+    document.body.appendChild(footer);
+    
 	
 	//console.log(doc_ici);
 	var triIngredients={};
