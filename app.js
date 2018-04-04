@@ -57,7 +57,7 @@ function disp(){
 	$("body").empty();
 	var recettes = document.createElement("div");
         recettes.setAttribute("class", "recettes ");
-        recettes.setAttribute("style", "margin: 0 auto; width: 80%;");
+        recettes.setAttribute("style", "margin: 0 auto; width: 50%;");
 	console.log(doc_ici);
         doc_ici.forEach(function(e){
             
@@ -71,7 +71,7 @@ function disp(){
 				
 				
 				var recetteTitre = document.createElement("h5");
-				recetteTitre.setAttribute("class", "card-title display-2");
+				recetteTitre.setAttribute("class", "card-title display-4");
 				recetteTitre.textContent=e.titre;
 				recetteTexte.appendChild(recetteTitre);
 				
