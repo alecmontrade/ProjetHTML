@@ -189,6 +189,7 @@ mesRecettes = [{
 		"disp":true,
         titre: "Saucisse Curry",
         img: "img/saucissecurry.jpg",
+	vid: "vid/bbqsaucissecurry.mp4",
         enTete:"Une saucisse au curry ! Intemporel et savoureux, vous ne décevrez pas ! ",
         tps:30,
         prix: "€€",
