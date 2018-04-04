@@ -37,8 +37,9 @@ function disp(){
             difficulte=c.difficulte;
             ingredients=c.ingredients;
             etapes=c.etapes;
-        }
-    });
+            video=c.vid;
+        
+    }});
     
     var recetteglobale=document.createElement("div");
     
@@ -83,6 +84,9 @@ function disp(){
     texteingredientdebut.textContent="Liste des ingrédient(s)";
     recetteglobale.appendChild(texteingredientdebut);
     
+    var affIngredients=document.createElement("div");
+    affIngredients.setAttribute("class","ingredients");
+    
     
     ingredients.forEach(function(a){
             var ingredient = document.createElement("div");
@@ -108,24 +112,42 @@ function disp(){
             ingredient.appendChild(ingredientTexte);
                     
         
-            recetteglobale.appendChild(ingredient);
+            affIngredients.appendChild(ingredient);
     });
     
+    recetteglobale.appendChild(affIngredients);
+    
+    var affEtapes=document.createElement("div");
+    affEtapes.setAttribute("class","etapes");
+    
     etapes.forEach(function(a){
+            
             
             var titredesc=document.createElement("h2");
             titredesc.setAttribute("class","display-4");
             titredesc.textContent=a.titre;
-            recetteglobale.appendChild(titredesc);
+            affEtapes.appendChild(titredesc);
 
             var descrecette=document.createElement("h5");
             descrecette.setAttribute("class","descrecette");
             descrecette.textContent=a.desc;
-            recetteglobale.appendChild(descrecette);
+            affEtapes.appendChild(descrecette);
 
     });
+            recetteglobale.appendChild(affEtapes);
+            
+            var titreVideo=document.createElement("h2")
+            titreVideo.setAttribute("class","titrevideo");
+            titreVideo.textContent="Une petite video pour vous aider : ";
+            recetteglobale.appendChild(titreVideo);
+            
+            var affvideo=document.createElement("video");
+            affvideo.setAttribute("class","video");
+            affvideo.setAttribute("src",video);
+            affvideo.setAttribute("controls","controls");
+            
     
-        
+            recetteglobale.appendChild(affvideo);
     
             document.body.appendChild(recetteglobale);
 
