@@ -1,24 +1,34 @@
+
+//----- ----- INIT VARIABLES ----- -----
+
 var doc_ici=[];
 var req = new XMLHttpRequest();
 var stop=0;
 
-function monCode() 
-		{ 
-		   if (req.readyState == 4) 
-		   { 
-				var doc = eval('(' + req.responseText + ')'); 
-				doc_ici=doc;
-		   }
-            stop=stop+1;
-            if(stop==3){
-                disp();
-            }
-		} 
+
+
+
+function monCode(){ 
+	   if (req.readyState == 4) 
+	   { 
+			var doc = eval('(' + req.responseText + ')'); 
+			doc_ici=doc; //stockage des infos dans variable globale doc_ici
+	   }
+	   stop=stop+1;
+		if(stop==3){ 
+			disp(); //lecture du fichier terminée
+		}
 		
+	} 
+		
+		
+
 		
 function disp(){
 	
+	//---------- ---------- AFFICHAGE PAGE ---------- ----------
 	
+	//----- ----- HEADER ----- -----
 	
 	var header = document.createElement("header");
     
@@ -47,6 +57,7 @@ function disp(){
     document.body.appendChild(header);
 	
 	
+	//----- ----- RECETTE ----- -----
     
     //Récupération de l'ID de la recette sélectionnée
     function getParameterURL(){
@@ -57,7 +68,7 @@ function disp(){
     
     var id = getParameterURL();
     
-    doc_ici.forEach(function(c){
+    doc_ici.forEach(function(c){ //recuperation données recette
         if(c.id==id){
             titre=c.titre;
             img=c.img;
@@ -118,7 +129,7 @@ function disp(){
     affIngredients.appendChild(texteingredientdebut);
     
    
-    
+    //----- ----- INGREDIENTS ----- -----
     
     ingredients.forEach(function(a){
             var ingredient = document.createElement("div");
@@ -148,6 +159,8 @@ function disp(){
     });
     
     recetteglobale.appendChild(affIngredients);
+	
+	//----- ----- ETAPES PREPARATION ----- -----
     
     var affEtapes=document.createElement("div");
     affEtapes.setAttribute("class","etapes");
@@ -168,24 +181,28 @@ function disp(){
     });
     
     
-            recetteglobale.appendChild(affEtapes);
-            
-            var titreVideo=document.createElement("h2")
-            titreVideo.setAttribute("class","titrevideo");
-            titreVideo.textContent="Une petite video pour vous aider : ";
-            recetteglobale.appendChild(titreVideo);
-            
-            var affvideo=document.createElement("video");
-            affvideo.setAttribute("class","video");
-            affvideo.setAttribute("src",video);
-            affvideo.setAttribute("controls","controls");
-            
-    
-            recetteglobale.appendChild(affvideo);
-    
-            document.body.appendChild(recetteglobale);
+	recetteglobale.appendChild(affEtapes);
+	
+	//----- ----- VIDEO ----- -----
+	
+	var titreVideo=document.createElement("h2")
+	titreVideo.setAttribute("class","titrevideo");
+	titreVideo.textContent="Une petite video pour vous aider : ";
+	recetteglobale.appendChild(titreVideo);
+	
+	var affvideo=document.createElement("video");
+	affvideo.setAttribute("class","video");
+	affvideo.setAttribute("src",video);
+	affvideo.setAttribute("controls","controls");
+	
+
+	recetteglobale.appendChild(affvideo);
+
+	document.body.appendChild(recetteglobale);
+	
+	//----- ----- FOOTER ----- -----
 			
-			var footer = document.createElement("footer");
+	var footer = document.createElement("footer");
     
     var traitfinpage = document.createElement("HR");
     footer.appendChild(traitfinpage);
@@ -195,16 +212,17 @@ function disp(){
     descfinpage.textContent=" Site web réalisé par Dyvia Fleury, Alec Montrade et Enzo Contini dans le cadre du cours de HTML5. ";
     footer.appendChild(descfinpage);
        
-    
-    
     document.body.appendChild(footer);
 
 }
 
-window.onload = function(e){ 
-	req.open("GET", "donnees.json", true); 
-	req.onreadystatechange = monCode;   // la fonction de prise en charge
-	req.send(null);
+
+
+
+window.onload = function(e){
+		req.open("GET", "donnees.json", true); 
+		req.onreadystatechange = monCode;   // Lecture du fichier JSON
+		req.send(null);	
 }
 
 
